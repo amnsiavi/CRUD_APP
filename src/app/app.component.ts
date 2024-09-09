@@ -13,7 +13,6 @@ import { CloseIconComponent } from './shared/close-icon/close-icon.component';
     TableComponent,
     LoadingSpinnerComponent,
     FallbackTextComponent,
-    CloseIconComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

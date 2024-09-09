@@ -4,7 +4,7 @@ img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  /* Add these properties for responsiveness */
+
   max-width: 100%;
   height: auto;
   object-fit: cover;
@@ -19,30 +19,29 @@ div {
   align-items: flex-end;
   justify-content: flex-end;
   position: relative;
-  top: 70px;
+  top: 60px;
   z-index: 10;
-  /* Add these properties for responsiveness */
+
   max-width: 100%;
-  padding: 0 1rem; /* Add some padding for smaller screens */
+  padding: 0 1rem;
 }
 
-/* Add media queries for different screen sizes */
 @media only screen and (max-width: 768px) {
   div {
-    top: 40px; /* Adjust the top position for smaller screens */
+    top: 55px;
   }
   img {
-    width: 20px; /* Adjust the image size for smaller screens */
+    width: 20px;
     height: 20px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   div {
-    top: 20px; /* Adjust the top position for even smaller screens */
+    top: 35px;
   }
   img {
-    width: 15px; /* Adjust the image size for even smaller screens */
+    width: 15px;
     height: 15px;
   }
 }

@@ -1,0 +1,22 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65vh;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  div {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  div {
+    height: 40vh;
+  }
+}

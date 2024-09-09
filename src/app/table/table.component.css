@@ -1,0 +1,47 @@
+table {
+  border-collapse: collapse;
+  width: 55rem;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  margin-top: 3rem;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: transparent;
+}
+
+tr:hover {
+  background-color: transparent;
+}
+
+th:hover {
+  background-color: transparent;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+  th,
+  td {
+    padding: 8px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  table {
+    font-size: 12px;
+  }
+  th,
+  td {
+    padding: 6px;
+  }
+}

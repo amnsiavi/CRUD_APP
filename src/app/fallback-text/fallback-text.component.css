@@ -34,3 +34,6 @@ button {
     width: 55rem;
   }
 }
+button:hover {
+  background-color: rgba(106, 100, 123, 0.8);
+}

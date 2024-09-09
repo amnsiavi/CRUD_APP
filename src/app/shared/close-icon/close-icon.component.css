@@ -1,0 +1,48 @@
+img {
+  color: #fff;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  /* Add these properties for responsiveness */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+}
+img:hover {
+  background-color: red;
+}
+
+div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  top: 70px;
+  z-index: 10;
+  /* Add these properties for responsiveness */
+  max-width: 100%;
+  padding: 0 1rem; /* Add some padding for smaller screens */
+}
+
+/* Add media queries for different screen sizes */
+@media only screen and (max-width: 768px) {
+  div {
+    top: 40px; /* Adjust the top position for smaller screens */
+  }
+  img {
+    width: 20px; /* Adjust the image size for smaller screens */
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  div {
+    top: 20px; /* Adjust the top position for even smaller screens */
+  }
+  img {
+    width: 15px; /* Adjust the image size for even smaller screens */
+    height: 15px;
+  }
+}

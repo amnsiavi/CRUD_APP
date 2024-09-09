@@ -1,9 +1,9 @@
 table {
   border-collapse: collapse;
-  width: 55rem;
+  width: 100%;
   margin-bottom: 20px;
   border: 1px solid #ddd;
-  margin-top: 3rem;
+  margin-top: 10vh;
 }
 
 th,
@@ -25,10 +25,10 @@ th:hover {
   background-color: transparent;
 }
 
-/* Responsive Design */
 @media only screen and (max-width: 768px) {
   table {
     font-size: 14px;
+    margin-top: 7vh;
   }
   th,
   td {
@@ -39,6 +39,7 @@ th:hover {
 @media only screen and (max-width: 480px) {
   table {
     font-size: 12px;
+    margin-top: 6vh;
   }
   th,
   td {

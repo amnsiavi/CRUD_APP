@@ -3,5 +3,5 @@
 @if(!toggleTable){
 <app-fallback-text (toggleDisplay)="onToggle()" />
 } @else {
-<app-table />
+<app-table (closeTable)="onToggle()" />
 }

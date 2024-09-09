@@ -1,4 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  ViewEncapsulation,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { CloseIconComponent } from '../shared/close-icon/close-icon.component';
 
 @Component({
@@ -9,4 +14,10 @@ import { CloseIconComponent } from '../shared/close-icon/close-icon.component';
   styleUrl: './table.component.css',
   encapsulation: ViewEncapsulation.None,
 })
-export class TableComponent {}
+export class TableComponent {
+  @Output() closeTable = new EventEmitter();
+
+  onTableClose() {
+    this.closeTable.emit();
+  }
+}

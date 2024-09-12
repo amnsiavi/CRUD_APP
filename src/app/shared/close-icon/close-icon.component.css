@@ -26,6 +26,12 @@ div {
   padding: 0 1rem;
 }
 
+@media screen and (max-width: 999px) and (min-width: 768px) {
+  div {
+    left: -50px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   div {
     top: 55px;

@@ -1,15 +1,14 @@
-import {
-  Component,
-  inject,
-  OnInit,
-  signal,
-  DestroyRef,
-  OnDestroy,
-} from '@angular/core';
+//Angular Packages
+import { Component, inject, OnInit, signal, DestroyRef } from '@angular/core';
+
+//Components
 import { HeaderComponent } from './header/header.component';
 import { TableComponent } from './table/table.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { FallbackTextComponent } from './fallback-text/fallback-text.component';
+import { NoDataFallbackTextComponent } from './no-data-fallback-text/no-data-fallback-text.component';
+
+//Service Injections
 import { ApiDataService } from '../services/api-data.service';
 
 @Component({
@@ -20,6 +19,7 @@ import { ApiDataService } from '../services/api-data.service';
     TableComponent,
     LoadingSpinnerComponent,
     FallbackTextComponent,
+    NoDataFallbackTextComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
     const subscription = this.apiService.loadUserComments().subscribe({
       next: (body) => {
         this.comments = body;
-        this.comments = this.comments.splice(0, 10);
+        this.comments = this.comments.splice(0, 5);
       },
       complete: () => {
         setTimeout(() => {

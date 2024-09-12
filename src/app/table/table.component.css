@@ -3,8 +3,9 @@ table {
   margin-bottom: 20px;
   border: 1px solid #ddd;
   margin-top: 10vh;
-  max-width: 50%;
-  width: 50%;
+  width: 100%;
+  height: 10px;
+  overflow: auto;
 }
 
 th,
@@ -26,12 +27,11 @@ th:hover {
   background-color: transparent;
 }
 
-/* Large screen devices (desktops) */
 @media screen and (min-width: 1000px) {
   table {
     font-size: 18px;
     margin-top: 15vh;
-    background-color: black;
+    color: white;
   }
   th,
   td {
@@ -41,25 +41,30 @@ th:hover {
 
 @media screen and (max-width: 999px) and (min-width: 768px) {
   table {
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 9vh;
     text-align: center;
   }
   th,
   td {
-    padding: 5px;
-    text-align: center;
+    padding: 10px;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   table {
     font-size: 14px;
     margin-top: 9vh;
+    overflow-x: auto;
   }
-  th,
-  td {
-    text-align: center;
-    padding: 10px;
+  .visible {
+    display: none;
   }
+}
+.actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }

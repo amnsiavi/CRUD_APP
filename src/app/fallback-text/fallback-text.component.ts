@@ -1,4 +1,9 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Output,
+  EventEmitter,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 @Component({
   selector: 'app-fallback-text',
@@ -6,6 +11,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   imports: [],
   templateUrl: './fallback-text.component.html',
   styleUrl: './fallback-text.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FallbackTextComponent {
   @Output() toggleDisplay = new EventEmitter();

@@ -3,6 +3,7 @@ import {
   ViewEncapsulation,
   Output,
   EventEmitter,
+  Input,
 } from '@angular/core';
 import { CloseIconComponent } from '../shared/close-icon/close-icon.component';
 
@@ -16,6 +17,7 @@ import { CloseIconComponent } from '../shared/close-icon/close-icon.component';
 })
 export class TableComponent {
   @Output() closeTable = new EventEmitter();
+  @Input({ required: true }) tableData?: any[];
 
   onTableClose() {
     this.closeTable.emit();

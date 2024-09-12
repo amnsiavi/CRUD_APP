@@ -6,7 +6,6 @@
 } } @else { @if(isAddingComments){
 <app-add-comments (cancel)="cancelComments()" (adding)="newComment($event)" />
 }@else {
-<app-close-icon (closeDisplay)="onTableClose()" />
 <table>
   <thead>
     <tr>

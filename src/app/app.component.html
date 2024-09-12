@@ -1,11 +1,9 @@
 <app-header />
 
-@if(!toggleTable){
-<app-fallback-text (toggleDisplay)="onToggle()" />
-} @else { @if(isFetching()){
+@if(isFetching()){
 <app-loading-spinner />
 } @else {
 <div>
-  <app-table (closeTable)="onToggle()" [tableData]="comments" />
+  <app-table [tableData]="comments" />
 </div>
-} }
+}

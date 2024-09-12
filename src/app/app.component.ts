@@ -5,7 +5,6 @@ import { Component, inject, OnInit, signal, DestroyRef } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { TableComponent } from './table/table.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
-import { FallbackTextComponent } from './fallback-text/fallback-text.component';
 import { NoDataFallbackTextComponent } from './no-data-fallback-text/no-data-fallback-text.component';
 
 //Service Injections
@@ -18,7 +17,6 @@ import { ApiDataService } from '../services/api-data.service';
     HeaderComponent,
     TableComponent,
     LoadingSpinnerComponent,
-    FallbackTextComponent,
     NoDataFallbackTextComponent,
   ],
   templateUrl: './app.component.html',
@@ -26,7 +24,7 @@ import { ApiDataService } from '../services/api-data.service';
 })
 export class AppComponent implements OnInit {
   title = 'CRUD';
-  toggleTable = false;
+
   comments: any;
   isFetching = signal(false);
 
@@ -49,9 +47,5 @@ export class AppComponent implements OnInit {
     this.destroyRef.onDestroy(() => {
       subscription.unsubscribe();
     });
-  }
-
-  onToggle() {
-    this.toggleTable = !this.toggleTable;
   }
 }
